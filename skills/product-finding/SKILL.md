@@ -93,6 +93,39 @@ Discard any product that fails any of these before adding to your results:
 
 ---
 
+## 🚨 CRITICAL: NEVER FABRICATE PRODUCT URLs
+
+**This is the most important rule in this skill.** Do NOT construct a product URL
+by guessing or assembling a plausible-looking item ID. AI-generated item IDs
+look real but are almost always wrong (e.g. `/item/3256804561234.html` —
+this numeric ID does not correspond to a real listing unless you explicitly
+loaded that page and confirmed it).
+
+**Fabricated URL rule:** If you cannot load and read the actual product page,
+you DO NOT have a verified URL. Period.
+
+### What to do when you cannot get a specific item URL
+
+AliExpress and Alibaba serve product listings via JavaScript, so simple HTTP
+fetches often return HTML without product links. In this case:
+
+1. **Use the verified search-page URL instead** — this is an honest, working URL
+   the user can open to find equivalent products:
+   - AliExpress: `https://www.aliexpress.com/w/wholesale-[search-terms].html`
+   - Alibaba: `https://www.alibaba.com/trade/search?SearchText=[search-terms]`
+   - DHgate: `https://www.dhgate.com/wholesale/[search-terms].html`
+   - 1688: `https://s.1688.com/selloffer/offerlist.htm?keywords=[terms]`
+
+2. **Label the URL clearly** as a search page, not a specific listing:
+   `⚠️ Search page (item URL unverifiable — JS-rendered platform)`
+
+3. **Never mark a search-page URL as `✅ Verified`** — that status is reserved for
+   confirmed individual product listing pages only.
+
+4. **Include the product name + platform** so the user can find it manually.
+
+---
+
 ## ⚠️ MANDATORY: URL verification for every listing
 
 **This step is not optional.** Every product URL you include in your results
@@ -104,16 +137,19 @@ reference.
 
 For each candidate product URL:
 
-1. **Attempt to load the page** — visit the URL directly
+1. **Attempt to load the page** — visit the URL directly using your browser tool
+   (not just `read_url_content` — that tool cannot execute JavaScript and will
+   miss product IDs on AliExpress/Alibaba/DHgate)
 2. **Check the response:**
-   - ✅ **HTTP 200 + product page loads** → URL is verified; include the product
+   - ✅ **HTTP 200 + product page loads with title and price visible** → URL is verified
    - ❌ **HTTP 404 (Page Not Found)** → discard the product entirely; do not include it
    - ❌ **HTTP 5xx (Server Error)** → discard; retry once after 30 seconds; if still failing, discard
    - ❌ **Redirect to homepage or search page** (not the product) → discard
    - ❌ **"Product unavailable", "Item removed", "Sold out permanently"** → discard
    - ⚠️ **"Temporarily out of stock" with listing still active** → keep, flag as ⚠️ stock risk
+   - ⚠️ **JS-rendered page / item URL unverifiable** → use search-page URL instead; flag as `⚠️ Search page`
 
-3. **Confirm the page shows the correct product** — not a redirect to an unrelated listing
+3. **Confirm the page shows the correct product** — title, price, and product images visible.
 
 ### What to record about URL verification
 
@@ -121,12 +157,16 @@ For every product in your output, record:
 
 | Verification status | Meaning |
 |---|---|
-| `✅ Verified` | Page loaded, product visible, correct listing |
-| `⚠️ Stock risk` | Page loads but item temporarily out of stock |
+| `✅ Verified` | Specific product page loaded; title, price, and images confirmed visible |
+| `⚠️ Search page` | JS-rendered platform — only a search-page URL available; user must find listing manually |
+| `⚠️ Stock risk` | Specific page loads but item temporarily out of stock |
 | `❌ Removed` | Product discarded — do not include in results |
 
 ### Common verification traps
 
+- **AliExpress / Alibaba / DHgate render via JavaScript.** `read_url_content` will
+  return raw HTML without product IDs. Do NOT guess item numbers from this.
+  Use the verified search-page URL approach and flag as `⚠️ Search page`.
 - **AliExpress** sometimes redirects removed listings to the store homepage — confirm you are on a product page, not a seller's main page
 - **1688** pages may load slowly — retry before discarding
 - **Alibaba** supplier inquiry pages look like products but are not — confirm you have a product listing with a stated price
