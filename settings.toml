@@ -1,0 +1,129 @@
+# Sfurti RnD — Project Settings
+# Edit these values to tune workflow behaviour without touching the skills or rules.
+
+[business]
+name        = "Sfurti"
+market      = "Bangladesh"
+description = "Trending toy products sourced from abroad (primarily China) and resold in Bangladesh via F-commerce (Facebook, Instagram, TikTok, personal website)."
+phase       = "phase-1"   # phase-1 = wooden/cognitive toys | phase-2 = broader problem-solving
+
+[target_audience]
+buyer           = "parents"
+end_user        = "children"
+max_age_years   = 17
+channels        = ["facebook", "instagram", "tiktok", "website"]
+
+# ── Product search parameters ──────────────────────────────────────────────────
+[product_search]
+# Search mode: "autonomous" = agent picks best products | "guided" = user specifies niche/age/theme
+default_mode = "autonomous"
+
+# How many raw candidates Source Scout should find before filtering
+raw_candidate_limit = 25
+
+# How many to present after scoring (top N by total score)
+shortlist_limit = 10
+
+# Sources for Source Scout subagent
+sourcing_platforms = [
+  "aliexpress",   # retail demand signal + order volume
+  "alibaba",      # wholesale price + MOQ + supplier rating
+  "1688",         # factory-direct pricing (cheapest tier)
+  "dhgate",       # mid-tier wholesale + faster shipping options
+]
+
+# Sources for Trend Analyst subagent
+trend_sources = [
+  "tiktok",           # viral content, hashtag momentum
+  "facebook-viral",   # BD parenting group posts, share counts
+  "google-trends",    # 12-month trajectory, BD + IN/PK proxy
+  "aliexpress-orders",# order volume velocity as demand proxy
+  "amazon-bestseller",# US/UK trending toys as leading indicator
+]
+
+# Sources for Ad Spy subagent
+ad_sources = [
+  "meta-ad-library",    # paid ads in Bangladesh (primary)
+  "bd-fcommerce-pages", # active Facebook/Instagram seller pages
+]
+
+# Seed keywords for autonomous mode (English)
+seed_keywords = [
+  "wooden puzzle",
+  "tangram",
+  "magnetic building blocks",
+  "montessori toy",
+  "sensory toy",
+  "balance board kids",
+  "logic puzzle children",
+  "STEM kit kids",
+  "wooden construction toy",
+  "pattern blocks",
+  "kinetic sand set",
+  "marble run",
+  "pop it fidget",
+  "squishy toy",
+  "sand art bottle",
+]
+
+# Seed keywords for BD-local source searches (Bengali)
+seed_keywords_bengali = [
+  "কাঠের খেলনা",       # wooden toys
+  "শিশু ধাঁধা",        # children puzzle
+  "বাচ্চাদের খেলনা",   # children's toys
+  "মন্টেসরি খেলনা",    # montessori toys
+]
+
+# ── Hard filters (applied by Source Scout before returning results) ─────────────
+[hard_filters]
+# Maximum unit sourcing price (USD at minimum viable order quantity)
+max_unit_cost_usd = 5.00
+
+# Minimum viable order quantity ceiling — skip products that force huge first orders
+max_acceptable_moq = 100
+
+# Physical products only — no digital, app-based, or screen-dependent products
+physical_only = true
+
+# No purely luck-based games (dice-only, card-draw-only with no skill)
+exclude_luck_based = true
+
+# Out of scope — do NOT evaluate these
+customs_bsti_check = false    # customs/BSTI certification is out of scope
+
+# ── Scoring weights (must sum to 1.0) ─────────────────────────────────────────
+[scoring]
+# 4 commercial dimensions
+weight_margin   = 0.30   # Profit margin potential
+weight_viral    = 0.30   # Trending / viral momentum
+weight_shipping = 0.20   # Cheap and easy to ship
+weight_visual   = 0.20   # Visual/video appeal for social commerce
+
+# Minimum weighted total (0-10) to appear in final shortlist
+min_total_score = 5.5
+
+# Mission fit minimum — products below this get ❌ flag (but score is still shown)
+min_mission_score = 4
+
+# ── Pricing & margin parameters ────────────────────────────────────────────────
+[pricing]
+# Exchange rate for margin math
+usd_to_bdt = 110.0
+
+# Target BD retail price range (BDT)
+retail_price_min_bdt = 350
+retail_price_max_bdt = 3000
+
+# Minimum acceptable gross margin (%) to score well on margin dimension
+min_gross_margin_pct = 40
+
+# Shipping cost estimate per unit (BDT) used in margin math if actual cost unknown
+default_shipping_cost_bdt = 80
+
+# ── Output format ──────────────────────────────────────────────────────────────
+[output]
+language = "english"
+require_source_url    = true    # every product must have a sourcing URL
+require_mission_flag  = true    # mission flag always shown alongside commercial score
+show_margin_math      = true    # top 3 briefs include cost → retail → margin calculation
+show_next_steps       = true    # always end with 2-3 actionable next steps
