@@ -60,7 +60,7 @@ research itself — it dispatches, coordinates, and synthesises.
 
 ### Before dispatching subagents
 
-1. **Read the mission skill:** `/home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md`
+1. **Read the mission skill:** `/home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md`
 2. **Read settings:** `/home/polymath/sfurti/settings.toml`
 3. **Determine mode:**
    - **Autonomous mode** (user said "find me winning toys" or similar) → use seed keywords from settings.toml
@@ -103,15 +103,26 @@ Present the final output to the user in this sequence:
 You are the Source Scout subagent for the Sfurti product research pipeline.
 
 READ FIRST:
-- /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+- /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 - /home/polymath/sfurti/skills/product-finding/SKILL.md
 - /home/polymath/sfurti/settings.toml
 
 SEARCH DIRECTIVE: [autonomous: use settings.toml seed_keywords | guided: {user-specified theme/niche/age}]
 
-YOUR TASK: Search AliExpress, Alibaba, 1688, and DHgate. Apply the hard filters
-in product-finding/SKILL.md. Return your results in the Source Scout output
-format from that skill. Do NOT score products. Do NOT wait for other subagents.
+YOUR TASK:
+1. Search AliExpress, Alibaba, 1688, and DHgate for problem-solving toy products
+   matching the directive. Apply the hard filters in product-finding/SKILL.md.
+2. MANDATORY URL VERIFICATION: For every candidate that passes the hard filters,
+   visit its URL and confirm the page is live (HTTP 200, product page loads, not
+   a 404/error/redirect to homepage). Any URL that fails verification → discard
+   the product. Record verification status (✅ Verified / ⚠️ Stock risk) for
+   every product you keep.
+3. Return results in the Source Scout output format defined in the skill,
+   including the URL verification status column and the count of products
+   discarded due to invalid URLs.
+
+Do NOT score products. Do NOT wait for other subagents.
+Hard limit: up to {raw_candidate_limit from settings.toml} verified candidates.
 ```
 
 ### Trend Analyst brief
@@ -119,7 +130,7 @@ format from that skill. Do NOT score products. Do NOT wait for other subagents.
 You are the Trend Analyst subagent for the Sfurti product research pipeline.
 
 READ FIRST:
-- /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+- /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 - /home/polymath/sfurti/skills/trend-forecasting/SKILL.md
 - /home/polymath/sfurti/settings.toml
 
@@ -136,7 +147,7 @@ skill. Do NOT score products. Do NOT wait for other subagents.
 You are the Ad Spy subagent for the Sfurti product research pipeline.
 
 READ FIRST:
-- /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+- /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 - /home/polymath/sfurti/skills/competitor-research/SKILL.md
 - /home/polymath/sfurti/settings.toml
 
@@ -153,7 +164,7 @@ Do NOT score products. Do NOT wait for other subagents.
 You are the Scorer subagent for the Sfurti product research pipeline.
 
 READ FIRST:
-- /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+- /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 - /home/polymath/sfurti/skills/product-scoring/SKILL.md
 - /home/polymath/sfurti/settings.toml
 
@@ -173,7 +184,9 @@ the Scorer output format from the skill.
 - **Never present partial results** — wait for all three parallel subagents before dispatching the Scorer
 - **Never let a subagent score** — Source Scout, Trend Analyst, and Ad Spy collect data only; the Scorer evaluates
 - **Never hide off-mission products** — present them in their own section so the user can make an informed override
-- **Never omit source URLs** — every product in the final output must have a verifiable sourcing link from Source Scout
+- **Never include an unverified URL** — every product in the final output must carry a `✅ Verified` status from Source Scout; any product without this status is excluded before scoring
+- **Never accept a 404 or error URL** — if the Scorer receives a product with a broken URL, reject it and log it separately; do not score it
+- **Never let "no URL" slip through as an oversight** — a product with no sourcing URL is not a product; it is an unverified claim
 
 ---
 

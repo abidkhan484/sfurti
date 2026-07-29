@@ -12,7 +12,7 @@ Before doing any product research, scoring, trend analysis, or competitor work,
 you MUST read:
 
 ```
-/home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+/home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 ```
 
 This is the tiebreaker when commercial criteria and mission criteria conflict.
@@ -44,6 +44,11 @@ The following actions are **prohibited** without explicit user confirmation:
 - **Never recommend a product without a source URL.** Every candidate must have
   a verifiable sourcing reference (Alibaba, AliExpress, 1688, DHgate, competitor page, etc.).
 
+- **Never include a sourcing URL that has not been verified as live.** A 404,
+  server error, redirect to homepage, or "item removed" page is a hard discard.
+  The Source Scout subagent must verify every URL before reporting it. The Scorer
+  must reject any product whose URL status is not `✅ Verified`.
+
 - **Never omit the mission flag** from a scoring table. Even if a product scores
   9/10 commercially, its mission alignment must be stated explicitly.
 
@@ -53,6 +58,12 @@ The following actions are **prohibited** without explicit user confirmation:
 
 - **Never recommend a product with a sourcing cost above $5 USD per unit** without
   explicit user approval. The $5 ceiling is a hard business constraint.
+
+- **Never shortlist a sensory or novelty product that does not require the child
+  to solve a problem.** Fidget toys, kinetic sand, squishies, pop-its, and similar
+  products may be commercially attractive but they are off-mission. If the child
+  does not have to *figure something out* using their hands and mind together,
+  the product is off-mission. Flag it; do not shortlist it as a core product.
 
 ---
 
@@ -67,8 +78,10 @@ Every product research output must include:
 | Sourcing price USD (at unit level, not bulk total) | ✅ |
 | BD retail price estimate (BDT) | ✅ |
 | Estimated gross margin % | ✅ |
+| Problem-solving mechanism (what the child must mentally do — not just "educational") | ✅ |
 | Mission flag (✅ on-mission / ⚠️ borderline / ❌ off-mission) | ✅ |
 | Sourcing URL (Alibaba / AliExpress / 1688 / DHgate link) | ✅ |
+| URL verification status (✅ Verified / ⚠️ Stock risk) | ✅ |
 | Viral / trend signal (TikTok, Google Trends, or order volume) | ✅ |
 | Evidence tier (🔥 all-three / ✅ opportunity / ⚠️ validate / 🔍 low) | ✅ |
 
@@ -99,7 +112,7 @@ relevant:
 
 | Skill file | Role in pipeline | When to load |
 |---|---|---|
-| `cognitive-dev-business-mission/SKILL.md` | Mission reference | Always — before any task |
+| `sfurti-business-mission/SKILL.md` | Mission reference | Always — before any task |
 | `master-agent-orchestration/SKILL.md` | Orchestration rules | Before running the parallel pipeline |
 | `product-finding/SKILL.md` | Source Scout subagent | When sourcing products from Alibaba/AliExpress/1688/DHgate |
 | `product-scoring/SKILL.md` | Scorer subagent | When cross-referencing results and ranking candidates |

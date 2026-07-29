@@ -1,6 +1,6 @@
 ---
-name: cognitive-dev-business-mission
-description: Use when finding, evaluating, scoring, or forecasting products for the Bangladesh cognitive-development business; researching competitors or trends for it; or answering questions about the business mission, target customer, brand voice, positioning, or product roadmap.
+name: sfurti-business-mission
+description: Use when finding, evaluating, scoring, or forecasting products for the Sfurti Bangladesh business; researching competitors or trends for it; or answering questions about the business mission, target customer, brand voice, positioning, or product roadmap.
 ---
 
 # Cognitive Development Business — Mission Reference

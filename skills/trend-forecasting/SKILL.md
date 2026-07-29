@@ -10,7 +10,7 @@ research pipeline. It runs concurrently with the Source Scout and Ad Spy
 subagents. Do not wait for them — research your signals independently and
 report back to the master agent.
 
-**REQUIRED BACKGROUND:** Read `cognitive-dev-business-mission` first. Trends that
+**REQUIRED BACKGROUND:** Read `sfurti-business-mission` first. Trends that
 drift away from "effortful, hands-on cognition" are still worth flagging as
 commercial signals — but label them clearly so the Scorer can apply the mission
 discount appropriately.
@@ -28,7 +28,16 @@ Master Agent
 
 Your output is merged with Source Scout's product list and Ad Spy's competitor
 data by the master agent before scoring. Your job is to assess **viral momentum
-and search-volume trajectory** — not to find products.
+and search-volume trajectory** for **problem-solving toy products** — not to
+find products, and not to report trend signals for novelty/sensory toys that
+don't fit the mission.
+
+**Search intent:** You are looking for trends where children are engaged in
+*solving something* (building, arranging, puzzling, constructing) — not
+just playing with something. When you find a trending product, ask:
+"Does the child have to figure something out, or are they just experiencing it?"
+If the answer is "just experiencing it", flag it as off-mission even if it's
+highly viral.
 
 ---
 
@@ -77,14 +86,20 @@ For each product keyword/category you research, capture:
 
 ## What makes a strong trend signal for this business
 
-**Strong:** TikTok videos showing a child hands-on with the product, high
-completion rate (long videos watched fully), comments showing purchase intent
-("where can I buy this?"), product appearing in multiple unrelated creators'
-feeds within 30 days.
+**Strong (problem-solving):** TikTok videos showing a child *working through*
+a puzzle, building set, or logic game — high completion rate, comments showing
+purchase intent ("where can I buy this?"), the child visibly struggles then
+succeeds. Appearing in multiple unrelated creators' feeds within 30 days.
 
 **Weak:** A single viral video with no follow-on content, "cute/novelty" appeal
 only with no replay engagement, trend visible only in US/EU markets with no
 South/Southeast Asia signal.
+
+**Off-mission trends (flag, don't suppress):** Fidget toys, kinetic sand, squishy
+toys, pop-its, and blind bags may be highly viral — always report them if they
+are genuinely trending, but label them explicitly: "⚠️ high viral momentum,
+off-mission (no problem-solving demand on child)." The Scorer and master
+agent will handle the tradeoff.
 
 ---
 

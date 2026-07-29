@@ -10,7 +10,7 @@ research pipeline. It runs concurrently with the Source Scout and Trend Analyst
 subagents. Do not wait for them — research your signals independently and
 report back to the master agent.
 
-**REQUIRED BACKGROUND:** Read `cognitive-dev-business-mission` first. Your job
+**REQUIRED BACKGROUND:** Read `sfurti-business-mission` first. Your job
 is to find what's already being sold to BD parents, what's working in ads, and
 where the gaps are — not to evaluate sourcing or trend signals.
 

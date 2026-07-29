@@ -48,22 +48,33 @@ ad_sources = [
 ]
 
 # Seed keywords for autonomous mode (English)
+# ALL keywords must align with the problem-solving business goal.
+# Do NOT add sensory/fidget/novelty keywords here.
 seed_keywords = [
-  "wooden puzzle",
-  "tangram",
-  "magnetic building blocks",
-  "montessori toy",
-  "sensory toy",
-  "balance board kids",
-  "logic puzzle children",
-  "STEM kit kids",
+  # Spatial reasoning & puzzles
+  "wooden jigsaw puzzle",
+  "tangram puzzle set",
+  "pattern blocks wooden",
+  "geometric shape puzzle",
+  "3D wooden puzzle",
+
+  # Construction & building
+  "magnetic building tiles",
+  "wooden building blocks",
   "wooden construction toy",
-  "pattern blocks",
-  "kinetic sand set",
-  "marble run",
-  "pop it fidget",
-  "squishy toy",
-  "sand art bottle",
+  "interlocking building set",
+
+  # Logic & strategy
+  "logic puzzle children",
+  "wooden maze board",
+  "sequence strategy game kids",
+  "brain teaser toy",
+
+  # STEM & structured problem-solving
+  "STEM kit kids hands-on",
+  "montessori problem solving toy",
+  "sorting matching toy toddler",
+  "shape sorter wooden",
 ]
 
 # Seed keywords for BD-local source searches (Bengali)
@@ -85,11 +96,36 @@ max_acceptable_moq = 100
 # Physical products only — no digital, app-based, or screen-dependent products
 physical_only = true
 
+# Problem-solving requirement — product must require cognitive effort from child
+# (arranging, building, sorting, navigating, completing a challenge)
+problem_solving_required = true
+
 # No purely luck-based games (dice-only, card-draw-only with no skill)
 exclude_luck_based = true
 
+# No novelty/sensory-only products (fidgets, squishies, sand art, kinetic sand)
+exclude_sensory_novelty = true
+
 # Out of scope — do NOT evaluate these
 customs_bsti_check = false    # customs/BSTI certification is out of scope
+
+# ── URL validation (enforced by Source Scout before reporting ANY product) ──────
+[url_validation]
+# Every sourcing URL must be verified live before inclusion
+verify_url_before_reporting = true
+
+# Acceptable HTTP responses
+acceptable_status = [200]
+
+# Any of these → discard the product immediately
+discard_on = ["404", "5xx", "redirect_to_homepage", "item_removed", "product_unavailable"]
+
+# Keep but flag these
+flag_on = ["temporarily_out_of_stock"]
+
+# Retry policy for server errors before discarding
+retry_on_5xx_count = 1
+retry_delay_seconds = 30
 
 # ── Scoring weights (must sum to 1.0) ─────────────────────────────────────────
 [scoring]

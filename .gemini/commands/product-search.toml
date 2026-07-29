@@ -11,7 +11,7 @@ PHASE 0 — Load context
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Read these files before doing anything else:
 
-  1. /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+  1. /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
   2. /home/polymath/sfurti/skills/master-agent-orchestration/SKILL.md
   3. /home/polymath/sfurti/settings.toml
 
@@ -35,19 +35,32 @@ Brief to send:
 "You are the Source Scout subagent for the Sfurti product research pipeline.
 
 READ FIRST (in this order):
-1. /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+1. /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 2. /home/polymath/sfurti/skills/product-finding/SKILL.md
 3. /home/polymath/sfurti/settings.toml
 
 SEARCH DIRECTIVE: {[AUTONOMOUS: seed_keywords from settings.toml] | [GUIDED: user's specified theme/niche/age]}
 
-TASK: Search AliExpress, Alibaba, 1688, and DHgate. Apply the hard filters
-from the skill (under $5 per unit, physical only, no luck-based, no passive).
-Capture all required fields per product. Return results in the Source Scout
-output format defined in the skill.
+SEARCH GOAL: You are searching for products that DEVELOP PROBLEM-SOLVING CAPABILITIES
+in children. The product must require the child to think, plan, attempt, and try again
+using their hands and mind together. Fidget, sensory, or novelty products that don't
+require the child to solve anything are off-mission — apply the hard filter from the skill.
+
+TASK:
+1. Search AliExpress, Alibaba, 1688, and DHgate. Apply the hard filters from the skill
+   (under $5 per unit, physical only, problem-solving required, no luck-based, no sensory/novelty).
+2. MANDATORY URL VERIFICATION: For every candidate that passes the hard filters, visit
+   its URL and confirm the page is live (HTTP 200, product page loads correctly, not a
+   404 / error / redirect to homepage / 'item removed' page).
+   ❌ If the URL fails → discard the product. Do not include it in results.
+   ✅ If the URL loads correctly → record as 'Verified'.
+   ⚠️ If the page loads but item is temporarily out of stock → record as 'Stock risk'.
+3. Capture all required fields per product, including URL verification status.
+4. Return results in the Source Scout output format defined in the skill.
+   Include a count of products discarded due to URL failures.
 
 DO NOT score products. DO NOT wait for other subagents.
-Hard limit: up to {raw_candidate_limit from settings.toml} raw candidates."
+Hard limit: up to {raw_candidate_limit from settings.toml} VERIFIED candidates."
 
 ── SUBAGENT B: TREND ANALYST ────────────────────────────────
 Role: Research viral signals and trend trajectory.
@@ -57,7 +70,7 @@ Brief to send:
 "You are the Trend Analyst subagent for the Sfurti product research pipeline.
 
 READ FIRST (in this order):
-1. /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+1. /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 2. /home/polymath/sfurti/skills/trend-forecasting/SKILL.md
 3. /home/polymath/sfurti/settings.toml
 
@@ -82,7 +95,7 @@ Brief to send:
 "You are the Ad Spy subagent for the Sfurti product research pipeline.
 
 READ FIRST (in this order):
-1. /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+1. /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 2. /home/polymath/sfurti/skills/competitor-research/SKILL.md
 3. /home/polymath/sfurti/settings.toml
 
@@ -110,11 +123,15 @@ If a subagent fails or times out:
   → Note the gap in your final output (e.g. "Trend signals unavailable")
   → Score missing dimension conservatively (assume score = 4/10 for that dim)
 
-Once all results are in, merge them:
-  1. List all products from Source Scout
-  2. For each product, find its matching signal from Trend Analyst (by keyword/category)
-  3. For each product, find its ad presence from Ad Spy (by product type)
-  4. Classify each product's evidence tier:
+Once all results are in:
+  1. URL PRE-CHECK FIRST: Review Source Scout results. Remove any product whose
+     URL verification status is NOT '✅ Verified'. Log these as:
+     'EXCLUDED (URL invalid): [product name] — reason: [404/error/redirect]'
+     These products are gone from the pipeline entirely.
+  2. List all remaining URL-verified products from Source Scout
+  3. For each product, find its matching signal from Trend Analyst (by keyword/category)
+  4. For each product, find its ad presence from Ad Spy (by product type)
+  5. Classify each product's evidence tier:
      - All three sources present → 🔥 High confidence
      - Source Scout + Trend (no BD ads yet) → ✅ Opportunity
      - Source Scout + Ad Spy (sold in BD, no viral) → ⚠️ Validate demand
@@ -129,7 +146,7 @@ Brief to send:
 "You are the Scorer subagent for the Sfurti product research pipeline.
 
 READ FIRST (in this order):
-1. /home/polymath/sfurti/skills/cognitive-dev-business-mission/SKILL.md
+1. /home/polymath/sfurti/skills/sfurti-business-mission/SKILL.md
 2. /home/polymath/sfurti/skills/product-scoring/SKILL.md
 3. /home/polymath/sfurti/settings.toml
 
@@ -139,20 +156,26 @@ INPUT DATA (merged from all three upstream subagents):
 Trend Analyst signals, Ad Spy ad presence, and evidence tier per product}
 
 TASK:
-1. Score each product on 4 dimensions using weights from settings.toml:
+1. MANDATORY PRE-CHECK: Before scoring, confirm every product has URL status
+   '✅ Verified'. Any product with '❌ Removed' or missing URL status is excluded
+   immediately. Log as 'EXCLUDED (URL invalid)' at the top of your output.
+
+2. Score each URL-verified product on 4 dimensions using weights from settings.toml:
    - Profit Margin Potential  (30%)
    - Viral Momentum           (30%)
    - Shipping Ease            (20%)
    - Visual / Video Appeal    (20%)
 
-2. Apply mission flag overlay (do NOT change commercial scores; flag separately):
+3. Apply mission flag overlay (do NOT change commercial scores; flag separately):
    ✅ on-mission / ⚠️ borderline / ❌ off-mission
 
-3. Discard products below min_total_score from settings.toml.
-4. Keep top {shortlist_limit} products.
-5. Return in Scorer output format: ranked table + top 3 briefs + off-mission section.
+4. Discard products below min_total_score from settings.toml.
+5. Keep top {shortlist_limit} products.
+6. Return in Scorer output format: ranked table + top 3 briefs + off-mission section.
+   Top 3 briefs must include: problem-solving mechanism, margin math, main risk,
+   content angle, and verified source URL.
 
-Use 1 USD = 110 BDT for margin math unless settings.toml specifies otherwise.
+Use 1 USD = {usd_to_bdt from settings.toml} BDT for margin math.
 Customs / BSTI checks are OUT OF SCOPE — do not score or comment on them."
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -172,9 +195,12 @@ Once the Scorer returns, present the final output in this exact order:
 
    For the top 3 only:
    - Why it ranked here (strongest driver)
+   - Problem-solving mechanism (what must the child mentally DO? e.g. "rotate
+     and fit 7 tangram pieces to match a target silhouette")
    - Margin math: sourcing cost → estimated BD retail → gross margin %
    - Main risk (1 sentence)
    - Recommended content angle (what video/photo format to use)
+   - Verified sourcing URL
 
 3. ── 🔴 OFF-MISSION (flagged but not discarded) ─────────────
 
@@ -195,9 +221,11 @@ Once the Scorer returns, present the final output in this exact order:
 MASTER AGENT GUARDRAILS — apply without exception
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✗ Never present results before the Scorer subagent has returned
-✗ Never omit a source URL from the final table
+✗ Never include a URL in the final table that is not '✅ Verified' by Source Scout
+✗ Never score or present a product whose URL returned 404, error, or redirect
 ✗ Never score customs/BSTI risk — explicitly out of scope
-✗ Never recommend a digital or app-based product as a core listing
+✗ Never shortlist a product that doesn't require problem-solving (sensory/fidget/novelty = off-mission)
+✗ Never accept "educational" as the problem-solving mechanism — require specifics
 ✗ Never present partial results as complete without disclosing the data gap
 ✗ Never let any subagent do another subagent's job
 """

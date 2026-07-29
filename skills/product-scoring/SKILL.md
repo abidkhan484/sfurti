@@ -9,7 +9,7 @@ This skill is executed by the **Scorer subagent** as the final stage of the
 parallel product research pipeline. You receive merged data from three upstream
 subagents and produce the final ranked shortlist.
 
-**REQUIRED BACKGROUND:** Read `cognitive-dev-business-mission` first. The mission
+**REQUIRED BACKGROUND:** Read `sfurti-business-mission` first. The mission
 lens is applied as a flag/overlay on top of commercial scoring — it doesn't
 replace the commercial score, but products that fail the mission lens must be
 explicitly flagged.
@@ -27,10 +27,27 @@ Master Agent
 ```
 
 You receive all three result sets from the master agent. Your job is to:
-1. Merge products from Source Scout with their trend and ad signals
-2. Score each product on 4 commercial dimensions
-3. Apply the mission flag overlay
-4. Produce the ranked shortlist in the required output format
+1. **Pre-check: reject any product whose URL is not verified** (see Step 0)
+2. Merge products from Source Scout with their trend and ad signals
+3. Score each product on 4 commercial dimensions
+4. Apply the mission flag overlay
+5. Produce the ranked shortlist in the required output format
+
+---
+
+## Step 0 — URL pre-check (mandatory before scoring)
+
+Before doing anything else, scan the Source Scout results for URL verification
+status. Any product marked `❌ Removed` or with no URL verification status
+must be **excluded immediately** — do not score, do not include in any output.
+
+If a product has `⚠️ Stock risk`, include it in scoring but add a stock-risk
+note in its detail brief.
+
+Log the pre-check result:
+```
+PRE-CHECK: X products received | Y excluded (URL invalid) | Z proceeding to scoring
+```
 
 ---
 
@@ -130,7 +147,7 @@ Use weights from `settings.toml [scoring]` if different values are set there.
 ## Step 4 — Apply mission flag overlay
 
 After computing the commercial score, check the mission lens from
-`cognitive-dev-business-mission`:
+`sfurti-business-mission`:
 
 - **✅ On-mission** — product builds effortful hands-on cognition; passes all 4 mission-lens questions
 - **⚠️ Borderline** — commercially strong but cognitive mechanism is weak or contested
@@ -158,9 +175,11 @@ Ranked by Total score, descending. Maximum `shortlist_limit` rows (from settings
 
 For the top 3 products only, add:
 - **Why it ranked here** (1 sentence on the strongest driver)
+- **Problem-solving mechanism** (specific: what does the child's brain *do* with this? e.g. "child must spatially rotate pieces to complete the silhouette")
 - **Margin math** (cost → retail → estimated margin %)
 - **Main risk** (1 sentence: what could go wrong)
 - **Content angle** (1 sentence: what video/photo format would work best)
+- **URL** (verified sourcing link from Source Scout)
 
 ### Section 3 — Off-Mission but Commercially Strong
 
@@ -171,8 +190,10 @@ List with: name, total score, mission flag reason, commercial case in one senten
 
 ## Common mistakes to avoid
 
+- **Don't skip Step 0** — score any product with an unverified URL and the entire output is tainted
 - **Don't average the 4 dimensions equally** — Margin and Viral are each 30%; Visual and Shipping are each 20%
 - **Don't let the mission flag inflate or deflate the commercial score** — they are separate outputs
 - **Don't guess margin math** — use actual sourcing prices from Source Scout and actual retail prices from Ad Spy; label any estimate as "est."
 - **Don't score customs/import risk** — this is explicitly out of scope
 - **Don't give every product a 7** — a product with no trend signal should score 0–3 on Viral, not a diplomatic 5
+- **Don't accept "educational" as the problem-solving mechanism in the detail brief** — describe specifically what the child must mentally do
