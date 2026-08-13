@@ -32,7 +32,7 @@
 **Voiceover (Bangla):** যখন ও ভুল করে আবার চেষ্টা করে, তখন ওর ব্রেইনের নিউরাল পাথওয়েগুলো শক্তিশালী হয়। এভাবেই লজিক বিল্ড হয়।
 
 ### Scene 4 — Resolution / Takeaway (10s)
-**Veo3 Prompt:** Scene transitions back to Sara, who now has a quiet small smile of success as she solves the problem. In the background, Sonia (a Bangladeshi woman in her late 20s in a simple cotton shalwar kameez in soft pastels, gentle expression) is visible. The golden hour light wraps around the scene softly.
+**Veo3 Prompt:** Scene transitions back to Sara. Frame her over-shoulder or from a slight distance, preventing a direct face close-up. Her body language should show quiet success. In the background, Sonia (a Bangladeshi woman in her late 20s in a simple cotton shalwar kameez in soft pastels, gentle expression) is visible. Maintain golden hour lighting and handheld documentary style.
 **Voiceover (Bangla):** তাই বাচ্চাকে রেডিমেড উত্তর না দিয়ে, সমস্যা নিয়ে ভাবতে দিন। লজিক এমনিতেই তৈরি হবে।
 
 ### Text Outro (5s)

@@ -29,7 +29,7 @@
 
 ### Prompt:
 ```
-A photorealistic portrait of an 8-year-old Bangladeshi child sitting on a warm wooden floor, completely engrossed in assembling a wooden structural puzzle. The child has an expression of intense focus and discovery. The lighting is soft, warm golden hour light streaming from a nearby window, highlighting the texture of the wooden blocks and the child's hands. The background is a slightly blurred, authentic Bangladeshi home interior with warm terracotta and ochre tones. Leave the top third of the image empty with a soft warm background for text overlay. Candid documentary style, natural imperfection, organic textures, high detail, warm lifestyle photography.
+A photorealistic over-the-shoulder shot of an 8-year-old Bangladeshi child sitting on a warm wooden floor, completely engrossed in assembling a wooden structural puzzle. The framing focuses on the child's hands, torso, and the wooden blocks, keeping the face hidden or turned away from camera. The lighting is soft, warm golden hour light streaming from a nearby window, highlighting the texture of the wooden blocks and the child's hands. The background is a slightly blurred, authentic Bangladeshi home interior with warm terracotta and ochre tones. Leave the top third of the image empty with a soft warm background for text overlay. Candid documentary style, natural imperfection, organic textures, high detail, warm lifestyle photography.
 ```
 
 ---
@@ -50,4 +50,4 @@ A photorealistic portrait of an 8-year-old Bangladeshi child sitting on a warm w
 ---
 
 ## Notes for Creator
-The child's face should reflect pure focus, not a posed smile. The magic of this image is the intense engagement.
+The framing must focus entirely on the hands, posture, and the structural puzzle. The child's face should be hidden or turned away from the camera. The magic of this image is the intense physical engagement.

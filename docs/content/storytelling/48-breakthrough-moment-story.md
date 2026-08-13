@@ -37,7 +37,7 @@
 ## Veo3 Production (9 scenes × ~10s = ~90s)
 
 ### Scene 1 — Hook (10s)
-**Veo3 Prompt:** Close up of Araf, early 30s Bangladeshi male, in a simple white cotton panjabi. He looks directly at the camera, relaxed and reflective. Golden afternoon sunlight is streaming through a window. In the background, Fatema, a Bangladeshi woman in her early 60s in a simple cotton saree, warm medium brown skin, hands in motion — sorting something at the kitchen counter. The home feels real and lived-in. Handheld documentary style.
+**Veo3 Prompt:** Close up of Araf, early 30s Bangladeshi male, in a simple white cotton panjabi. He looks thoughtfully off-camera, relaxed and reflective. Golden afternoon sunlight is streaming through a window. In the background, Fatema, a Bangladeshi woman in her early 60s in a simple cotton saree, warm medium brown skin, hands in motion — sorting something at the kitchen counter. The home feels real and lived-in. Handheld documentary style.
 **Voiceover (Bangla):** সেই বিকেলটার কথা আমার খুব মনে পড়ে। ঘরে একটা অদ্ভুত নীরবতা ছিল।
 
 ### Scene 2 — Problem (10s)
@@ -69,7 +69,7 @@
 **Voiceover (Bangla):** স্ক্রিন নিয়ে পড়ে থাকার নীরবতা আর নিজের বুদ্ধিতে কিছু একটা তৈরি করার নীরবতা—দুটোর মধ্যে তফাৎটা সেদিন আমি মন থেকে অনুভব করেছি।
 
 ### Scene 9 — Call to Action (10s)
-**Veo3 Prompt:** Medium shot. Araf leans forward slightly, looking directly into the lens. The whole family home is warm behind him — Sonia (a Bangladeshi woman in her late 20s in a pastel shalwar kameez), Rahim (an elderly Bangladeshi man in his mid-60s seated patiently), and Fatema (a Bangladeshi woman in her early 60s in a cotton saree) are all visible in the background going about their lives. Handheld documentary style.
+**Veo3 Prompt:** Medium shot. Araf leans forward slightly, looking thoughtfully off-camera. The whole family home is warm behind him — Sonia (a Bangladeshi woman in her late 20s in a pastel shalwar kameez), Rahim (an elderly Bangladeshi man in his mid-60s seated patiently), and Fatema (a Bangladeshi woman in her early 60s in a cotton saree) are all visible in the background going about their lives. Handheld documentary style.
 **Voiceover (Bangla):** এরকম কোনো মুহূর্ত আপনার জীবনে হয়েছে? আমাকে বলুন।
 
 ---

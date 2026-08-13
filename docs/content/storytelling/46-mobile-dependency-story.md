@@ -37,7 +37,7 @@
 ## Veo3 Production (9 scenes × ~10s = ~90s)
 
 ### Scene 1 — Hook (10s)
-**Veo3 Prompt:** Close up of Araf, early 30s Bangladeshi male, wearing a simple white panjabi, sitting in a warm, dimly lit living room at night. He looks directly at the camera with a tired but honest expression. Through a doorway in the background, Fatema, a Bangladeshi woman in her early 60s in a simple cotton saree with a thin border, warm medium brown skin, white-grey hair loosely covered with a thin orna, rounded face with deep laugh lines, is visible. Handheld documentary style, slight natural sway.
+**Veo3 Prompt:** Close up of Araf, early 30s Bangladeshi male, wearing a simple white panjabi, sitting in a warm, dimly lit living room at night. He looks thoughtfully off-camera, with a tired but honest expression. Through a doorway in the background, Fatema, a Bangladeshi woman in her early 60s in a simple cotton saree with a thin border, warm medium brown skin, white-grey hair loosely covered with a thin orna, rounded face with deep laugh lines, is visible. Handheld documentary style, slight natural sway.
 **Voiceover (Bangla):** আমার সন্তান একটা সময় মোবাইল ছাড়া ঘুমাতেই পারত না।
 
 ### Scene 2 — Problem (10s)
@@ -57,7 +57,7 @@
 **Voiceover (Bangla):** তারপর একটা ছোট পরিবর্তন আনলাম। ঘুমানোর ঠিক ৩০ মিনিট আগে আমরা দুজনে মিলে হাতে কিছু একটা তৈরি করা শুরু করলাম, যেমন ছোট ছোট ব্লক মেলানো।
 
 ### Scene 6 — Ideology / Movement (10s)
-**Veo3 Prompt:** Close up of Zayan (a 7-year-old Bangladeshi boy, warm brown skin, large expressive eyes) at a low table, leaning forward in concentration, hands moving on surface, carefully placing wooden blocks. In the background, Fatema (a Bangladeshi woman in her early 60s in a simple cotton saree) watches quietly from her chair, knitting. Soft warm lamplight, highly detailed textures. Handheld, slow and deliberate movement.
+**Veo3 Prompt:** Close up of Zayan's hands (a 7-year-old Bangladeshi boy, warm brown skin) at a low table, carefully placing wooden blocks, framed from over the shoulder so his face is not clearly visible. In the background, Fatema (a Bangladeshi woman in her early 60s in a simple cotton saree) watches quietly from her chair, knitting. Soft warm lamplight, highly detailed textures. Handheld, slow and deliberate movement.
 **Voiceover (Bangla):** এটাই তো আসল কথা। মস্তিষ্ককে নিজে থেকে কিছু করার সুযোগ দেওয়া। ভাবো, খেলো, বাড়ো।
 
 ### Scene 7 — Results (10s)
@@ -69,7 +69,7 @@
 **Voiceover (Bangla):** ওকে যখন শান্তভাবে, স্ক্রিন ছাড়া ঘুমাতে দেখলাম, মনে হলো আমার বুকের ওপর থেকে বড় একটা পাথর নেমে গেল।
 
 ### Scene 9 — Call to Action (10s)
-**Veo3 Prompt:** Medium-close shot of Araf looking directly into the camera, leaning forward slightly in his white panjabi. He looks approachable and genuinely curious. The full family home is visible behind him, warmly lit and inviting. Handheld sway.
+**Veo3 Prompt:** Medium-close shot of Araf looking thoughtfully off-camera, leaning forward slightly in his white panjabi. He looks approachable and genuinely curious. The full family home is visible behind him, warmly lit and inviting. Handheld sway.
 **Voiceover (Bangla):** আপনার বাচ্চার ঘুমানোর রুটিন কেমন? আমাকে কমেন্টে জানান।
 
 ---

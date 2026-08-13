@@ -28,7 +28,7 @@
 **Voiceover (Bangla):** যখনই আমরা রেডিমেড সমাধান দিয়ে দিই, বাচ্চা চিন্তা করা বন্ধ করে দেয়। ওর ব্রেইন আলসে হয়ে যায়।
 
 ### Scene 3 — Core Message / Insight (10s)
-**Veo3 Prompt:** Scene shows Sara (a 10-year-old Bangladeshi girl in a simple cotton dress) and Zayan both working independently on different cognitive tasks in the same warm space. Nearby in the background, Sonia (a Bangladeshi woman in her late 20s in a simple cotton shalwar kameez) is gently folding laundry. Handheld documentary style.
+**Veo3 Prompt:** Medium shot framed from a slight distance of Sara (a 10-year-old Bangladeshi girl in a simple cotton dress) and Zayan both working independently on different cognitive tasks in the same warm space, avoiding direct face close-ups. Sonia (a Bangladeshi woman in her late 20s in a simple cotton shalwar kameez) is nearby in background, gently folding laundry or doing household activity. Handheld documentary style.
 **Voiceover (Bangla):** এর বদলে, ওকে সমস্যাটা দিন, সমাধান নয়। একটু অপেক্ষা করুন। ওকে ওর মতো করে ভুল করতে দিন, ভাবতে দিন। 
 
 ### Scene 4 — Resolution / Takeaway (10s)

@@ -37,7 +37,7 @@
 ## Veo3 Production (9 scenes × ~10s = ~90s)
 
 ### Scene 1 — Hook (10s)
-**Veo3 Prompt:** Close up of Araf, early 30s Bangladeshi male, wearing a muted light grey round-neck t-shirt. He is sitting at a simple wooden desk with natural window light coming from the side. He looks thoughtfully and slightly vulnerably into the camera, an honest admission. Handheld documentary style, slow sway.
+**Veo3 Prompt:** Close up of Araf, early 30s Bangladeshi male, wearing a muted light grey round-neck t-shirt. He is sitting at a simple wooden desk with natural window light coming from the side. He looks thoughtfully off-camera, an honest vulnerable admission. Handheld documentary style, slow sway.
 **Voiceover (Bangla):** আমি একসময় সত্যি ভাবতাম, আমার বাচ্চা মনে হয় অন্যদের মতো মেধাবী না।
 
 ### Scene 2 — Problem (10s)
@@ -69,7 +69,7 @@
 **Voiceover (Bangla):** যে বাচ্চাটা একসময় ভাবত সে 'বোকা', তার চোখে নিজের বুদ্ধির ওপর ভরসা করার সেই ঝিলিকটা দেখা ছিল আমার জীবনের সেরা মুহূর্ত।
 
 ### Scene 9 — Call to Action (10s)
-**Veo3 Prompt:** Close up of Araf looking back directly into the camera. He is relaxed, friendly, and approachable, wearing a simple white panjabi. In the background, Rahim, an elderly Bangladeshi man in his mid-60s in a simple white cotton panjabi and lungi, is visible seated calmly — the grandfather who knew. Soft ambient room light. Handheld documentary style.
+**Veo3 Prompt:** Close up of Araf looking thoughtfully off-camera, relaxed and approachable, wearing a simple white panjabi. In the background, Rahim, an elderly Bangladeshi man in his mid-60s in a simple white cotton panjabi and lungi, is visible seated calmly — the grandfather who knew. Soft ambient room light. Handheld documentary style.
 **Voiceover (Bangla):** আপনার কি কখনো মনে হয়েছিল আপনার সন্তান পারবে না? সেই মুহূর্তটা কেমন ছিল?
 
 ---
@@ -80,7 +80,7 @@
 নিজের সন্তানকে নিজেকে ছোট ভাবতে দেখার চেয়ে বড় কষ্ট একজন বাবার জন্য আর কিছু হতে পারে না। 
 আমি ভাবলাম, বেশি বেশি পড়াশোনা করালে হয়তো ঠিক হবে। আরও টিউটর, আরও চাপ—সবই ভুল ছিল। 
 একদিন দেখলাম, পড়াশোনার বাইরে একটা নতুন ধরনের কাজ করতে দিলাম ওকে। একটা ছোট কগনিটিভ চ্যালেঞ্জ। টানা ৪৫ মিনিট ও সেটা নিয়ে একা পড়ে রইল। 
-সেদিন বুঝলাম, মেধা জন্মগতভাবে থেমে থাকে অ্যাকাডেমিক মার্কশিটে। চেষ্টা আর অভ্যাসের মাধ্যমে মেধা বাড়ে। 
+সেদিন বুঝলাম, মেধা জন্মগতভাবে থেমে থাকে না। চেষ্টা আর অভ্যাসের মাধ্যমে মেধা বাড়ে। 
 ভাবো, খেলো, বাড়ো। 
 রাতারাতি কিছুই বদলায়নি। কিন্তু ধীরে ধীরে, নিজের মতো করে জিনিস সমাধানের আনন্দ ওকে আত্মবিশ্বাসী করে তুলল। 
 যে বাচ্চাটা একসময় ভাবত সে 'বোকা', তার চোখে নিজের বুদ্ধির ওপর ভরসা করার সেই ঝিলিকটা দেখা ছিল আমার জীবনের সেরা মুহূর্ত। 

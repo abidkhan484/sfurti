@@ -24,7 +24,7 @@
 **Voiceover (Bangla):** একটা কঠিন ধাঁধা মেলানোর পর বাচ্চার চোখের সেই আনন্দটা খেয়াল করেছেন? এটা শুধু খুশি হওয়া নয়।
 
 ### Scene 2 — Context / Problem (10s)
-**Veo3 Prompt:** Breakthrough moment — Zayan finally fits the last piece and his body language shows a wide, genuinely proud reaction, face lighting up. He immediately looks around for someone to share the moment with. Warm sunlight catches the scene.
+**Veo3 Prompt:** Breakthrough moment — Medium shot framed from a slight distance or focused on Zayan's hands and torso as he fits the last piece. His body language shows a genuinely proud reaction, avoiding direct face close-up. He looks around for someone to share the moment with. Warm sunlight. Handheld documentary style.
 **Voiceover (Bangla):** এই আনন্দটা হলো ব্রেইনের হেলদি ডোপামিন রেসপন্স। যখন সে নিজের চেষ্টায় একটা সমস্যার সমাধান করে, তখন ওর ভেতর একটা রিওয়ার্ড লুপ তৈরি হয়।
 
 ### Scene 3 — Core Message / Insight (10s)
