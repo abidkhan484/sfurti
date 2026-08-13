@@ -1,9 +1,8 @@
-</24 — মনোযোগ বাড়লে কি পড়াশোনাতেও পরিবর্তন আসে?>
 **Module:** Benefits
 **Format:** 15-second Reel
 **Pillar:** The Evidence
 **Voice Mode:** Nurture
-**Release Day:** 10
+**Release Day:** 8
 
 ---
 

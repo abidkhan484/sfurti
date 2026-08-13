@@ -1,9 +1,8 @@
-</23 — হাতের কাজ মাথাকে কীভাবে সক্রিয় রাখে?>
 **Module:** Benefits
 **Format:** 15-second Reel
 **Pillar:** The Evidence
 **Voice Mode:** Nurture
-**Release Day:** 8
+**Release Day:** 6
 
 ---
 

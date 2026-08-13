@@ -1,4 +1,3 @@
-</21 — ধৈর্য কি জন্মগত? নাকি এটা একটা দক্ষতা যা অর্জন করা যায়?>
 **Module:** Benefits
 **Format:** 15-second Reel
 **Pillar:** The Practice

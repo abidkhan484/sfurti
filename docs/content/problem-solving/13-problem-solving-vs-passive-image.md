@@ -1,10 +1,9 @@
-</13 — Problem-solving vs Passive entertainment — পার্থক্যটা এখানে>
 <13 — Problem-solving vs Passive entertainment — পার্থক্যটা এখানে>
 **Module:** Problem Solving
 **Format:** Image (Nano Banana)
 **Pillar:** The Problem + Practice
 **Voice Mode:** Educate
-**Release Day:** 6
+**Release Day:** 3
 
 ---
 

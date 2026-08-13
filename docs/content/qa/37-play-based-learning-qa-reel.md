@@ -3,7 +3,7 @@
 **Format:** 15-second Reel
 **Pillar:** The Approach
 **Voice Mode:** Convert
-**Release Day:** 10
+**Release Day:** 11
 
 ---
 

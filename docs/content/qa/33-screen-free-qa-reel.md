@@ -3,7 +3,7 @@
 **Format:** 15-second Reel
 **Pillar:** The Problem
 **Voice Mode:** Nurture
-**Release Day:** 2
+**Release Day:** 7
 
 ---
 

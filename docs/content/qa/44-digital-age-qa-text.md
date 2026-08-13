@@ -3,7 +3,7 @@
 **Format:** Facebook Text Post
 **Pillar:** The Community
 **Voice Mode:** Nurture
-**Release Day:** 13
+**Release Day:** 14
 
 ---
 

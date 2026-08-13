@@ -1,10 +1,9 @@
-</46 — আমার সন্তান মোবাইল ছাড়া ঘুমাতে পারত না। একটাই জিনিস বদলে দিল সব।>
 <46 — আমার সন্তান মোবাইল ছাড়া ঘুমাতে পারত না। একটাই জিনিস বদলে দিল সব।>
 **Module:** Storytelling
 **Format:** Storytelling Video (~90 seconds)
 **Pillar:** The Community + The Problem
 **Voice Mode:** Nurture
-**Release Day:** 3
+**Release Day:** 9
 
 > Golden Rule: Never try to sell. Share experiences and emotions. Make the audience feel understood. Step 6 = introduce the ideology/movement (no product — Sfurti is pre-launch).
 

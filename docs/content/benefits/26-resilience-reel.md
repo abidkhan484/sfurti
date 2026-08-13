@@ -1,9 +1,8 @@
-</26 — বাচ্চা হার মানতে শিখলে জীবনে এগিয়ে যায় — এই সত্যটা অনেকে জানেন না>
 **Module:** Benefits
 **Format:** 15-second Reel
 **Pillar:** The Practice
 **Voice Mode:** Nurture
-**Release Day:** 12
+**Release Day:** 11
 
 ---
 

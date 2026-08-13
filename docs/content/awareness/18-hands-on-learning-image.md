@@ -1,10 +1,9 @@
-</18 — হাতে-কলমে শেখা কেন ক্লাসরুমের চেয়ে শক্তিশালী?>
 <18 — হাতে-কলমে শেখা কেন ক্লাসরুমের চেয়ে শক্তিশালী?>
 **Module:** Awareness
 **Format:** Image (Nano Banana)
 **Pillar:** The Evidence
 **Voice Mode:** Nurture
-**Release Day:** 7
+**Release Day:** 3
 
 ---
 

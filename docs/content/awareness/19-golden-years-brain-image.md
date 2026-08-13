@@ -1,10 +1,9 @@
-</19 — ৬ থেকে ১২ বছর — শিশুর মস্তিষ্কের সোনালি সময়>
 <19 — ৬ থেকে ১২ বছর — শিশুর মস্তিষ্কের সোনালি সময়>
 **Module:** Awareness
 **Format:** Image (Nano Banana)
 **Pillar:** The Evidence
 **Voice Mode:** Convert
-**Release Day:** 11
+**Release Day:** 4
 
 ---
 

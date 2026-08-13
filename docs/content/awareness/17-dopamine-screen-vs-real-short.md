@@ -1,10 +1,9 @@
-</17 — শিশুর মস্তিষ্কে ডোপামিন: স্ক্রিন বনাম বাস্তব অভিজ্ঞতা>
 <17 — শিশুর মস্তিষ্কে ডোপামিন: স্ক্রিন বনাম বাস্তব অভিজ্ঞতা>
 **Module:** Awareness
 **Format:** Short Video (~45 seconds)
 **Pillar:** The Evidence
 **Voice Mode:** Nurture
-**Release Day:** 5
+**Release Day:** 2
 
 ---
 

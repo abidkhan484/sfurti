@@ -1,10 +1,9 @@
-</12 — ৫টি কারণ কেন শিশুর হাতে কাজ দেওয়া উচিত>
 <12 — ৫টি কারণ কেন শিশুর হাতে কাজ দেওয়া উচিত>
 **Module:** Problem Solving
 **Format:** Image (Nano Banana)
 **Pillar:** The Practice
 **Voice Mode:** Nurture
-**Release Day:** 1
+**Release Day:** 2
 
 ---
 

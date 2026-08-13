@@ -3,7 +3,7 @@
 **Format:** Short Video (~45 seconds)
 **Pillar:** The Approach
 **Voice Mode:** Convert
-**Release Day:** 15
+**Release Day:** 16
 
 ---
 

@@ -3,7 +3,7 @@
 **Format:** 15-second Reel
 **Pillar:** The Results
 **Voice Mode:** Nurture
-**Release Day:** 7
+**Release Day:** 10
 
 ---
 

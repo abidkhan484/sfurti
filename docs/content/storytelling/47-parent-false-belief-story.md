@@ -1,10 +1,9 @@
-</47 — আমি ভাবতাম আমার বাচ্চা মেধাবী না। ভুলটা ছিল আমার।>
 <47 — আমি ভাবতাম আমার বাচ্চা মেধাবী না। ভুলটা ছিল আমার।>
 **Module:** Storytelling
 **Format:** Storytelling Video (~90 seconds)
 **Pillar:** The Community + The Problem
 **Voice Mode:** Nurture
-**Release Day:** 9
+**Release Day:** 12
 
 > Golden Rule: Never try to sell. Share experiences and emotions. Make the audience feel understood. Step 6 = introduce the ideology/movement (no product — Sfurti is pre-launch).
 

@@ -1,9 +1,8 @@
-</22 — বাচ্চা নিজে সমাধান করলে আত্মবিশ্বাস তৈরি হয় এভাবে>
 **Module:** Benefits
 **Format:** 15-second Reel
 **Pillar:** The Practice
 **Voice Mode:** Nurture
-**Release Day:** 4
+**Release Day:** 5
 
 ---
 

@@ -1,10 +1,9 @@
-</16 — অ্যাটেনশন স্প্যান কী এবং আপনার সন্তানের জন্য এটা কেন জরুরি?>
 <16 — অ্যাটেনশন স্প্যান কী এবং আপনার সন্তানের জন্য এটা কেন জরুরি?>
 **Module:** Awareness
 **Format:** Short Video (~45 seconds)
 **Pillar:** The Evidence
 **Voice Mode:** Nurture / Convert
-**Release Day:** 2
+**Release Day:** 1
 
 ---
 

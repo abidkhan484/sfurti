@@ -1,4 +1,3 @@
-</28 — শিশুর IQ নয়, EQ বাড়ান — পার্থক্যটা জানুন>
 **Module:** Benefits
 **Format:** Short Video (~45 seconds)
 **Pillar:** The Evidence

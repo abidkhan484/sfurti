@@ -3,7 +3,7 @@
 **Format:** Short Video (~45 seconds)
 **Pillar:** The Problem + Practice
 **Voice Mode:** Nurture
-**Release Day:** 7
+**Release Day:** 6
 
 ---
 
